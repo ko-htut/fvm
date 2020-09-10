@@ -45,7 +45,7 @@ String getConfigFlutterVersion() {
     final config = readProjectConfig();
     return config.flutterSdkVersion;
   } on Exception {
-    return null;
+    throw Exception('No Flutter SDK has been configured');
   }
 }
 
